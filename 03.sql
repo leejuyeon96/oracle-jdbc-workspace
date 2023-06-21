@@ -346,7 +346,19 @@
       WHERE 조건식
       ORDER BY 정렬하고자하는 컬럼값[ASC|DESC] [NULLS FIRST | NULLS LAST];
       
+      -ASC : 오름차순 정렬 (생략시 기본값)
+      -DESC : 내림차순 정렬
+      -NULLS FIRST : 정렬하고자하는 컬럼값에 NULL이 있을 경우 해당 데이터를 맨 앞 배치(생략시 DESC 일때 기본값)
+      -NULLS LAST : 정렬하고자하는 컬럼값에  NULL이 있을 경우 해당 데이터를 맨 뒤 배치 (생략시 ASC 일때 기본값)
+      
+      
+                    
     */
-    
+    --전 사원의 사원명, 보너스 조회(오름차순 정렬)
+    SELECT EMP_NAME, BONUS
+    FROM EMPLOYEE
+    WHERE BONUS IS NOT NULL
+  --  ORDER BY BONUS;
+    ORDER BY BONUS DESC NULLS LAST;
     
     
