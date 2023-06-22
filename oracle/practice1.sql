@@ -1,0 +1,22 @@
+ --1. 춘기술대학교의 학과이름과 계열을 표시하세요
+ SELECT DEPARTMENT_NAME "학과명", CATEGORY "계열"
+ FROM TB_DEPARTMENT;
+ 
+ --2. 학과별 학과 정원을 출력한다.
+ SELECT DEPARTMENT_NAME || '의 정원은' || CAPACITY || '명 입니다.'
+ FROM TB_DEPARTMENT;
+ 
+ --3. 국어국문학과에 다니는 여학생중 휴학한 여학생 찾기
+ SELECT STUDENT_NAME
+ FROM  TB_STUDENT
+ WHERE DEPARTMENT_NO = '001' AND 
+ SUBSTR(STUDENT_SSN, 8 ,1) = 2 AND
+ ABSENCE_YN = 'Y';
+ 
+ --4. 도서관 대출 도서 장기 연체자 찾기
+ SELECT STUDENT_NAME
+ FROM TB_STUDENT
+ WHERE STUDENT_NO = 'A513079', 'A513090', 'A513091', 'A513110', 'A513119';
+ 
+ 
+ 
