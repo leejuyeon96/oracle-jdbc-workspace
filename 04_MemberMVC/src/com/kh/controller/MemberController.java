@@ -16,7 +16,7 @@ public class MemberController {
 		try {
 			if (dao.getMember(m.getId()) == null) {
 				dao.registerMember(m);
-							return true;
+				return true;
 } 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -31,16 +31,15 @@ public class MemberController {
 		Member m = new Member();
 		m.setId(id);
 		m.setPassword(password);
-		
-		Member result;
 		try {
-			result = dao.login(m);
+			Member result = dao.login(m);
 			if (result!=null) {
 	            return result.getName();}
 		 
-		} catch (SQLException e) {
-			e.printStackTrace();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
 		}
+						
 		return null;		
 	}
 		
