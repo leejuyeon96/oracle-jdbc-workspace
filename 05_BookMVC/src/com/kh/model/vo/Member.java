@@ -10,6 +10,9 @@ public class Member {
 	private String memberName;
 	private char status;
 	private Date enrollDate;
+	
+	
+	
 	public Member() {
 		
 	}
@@ -19,6 +22,11 @@ public class Member {
 		this.memberPwd = password;
 		this.memberName = name;
 	}
+	public Member(int memberNo) {
+		this.memberNo = memberNo;
+		
+	}
+	
 	public int getMemberNo() {
 		return memberNo;
 	}
