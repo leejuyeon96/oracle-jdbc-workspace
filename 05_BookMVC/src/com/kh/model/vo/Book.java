@@ -5,7 +5,18 @@ public class Book {
 	private int bkNo;
 	private String bkTitle;
 	private String bkAuthor;
+	
 	public Book(String title, String author) {
+		this.bkTitle = title;
+		this.bkAuthor = author;
+	}
+	public Book(int bkNo, String bkTitle, String bkAuthor) {
+		this.bkNo = bkNo;
+		this.bkTitle = bkTitle;
+		this.bkAuthor = bkAuthor;
+	}
+	public Book(int no) {
+		this.bkNo = no;
 	}
 	public int getBkNo() {
 		return bkNo;
@@ -24,6 +35,10 @@ public class Book {
 	}
 	public void setBkAuthor(String bkAuthor) {
 		this.bkAuthor = bkAuthor;
+	}
+	@Override
+	public String toString() {
+		return "Book [bkNo=" + bkNo + ", bkTitle=" + bkTitle + ", bkAuthor=" + bkAuthor + "]";
 	}
 	
 	
