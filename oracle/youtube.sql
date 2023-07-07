@@ -169,12 +169,14 @@ COMMIT;
 --비디오 전체 목록보기
 SELELCT * FROM VIDEO;
 
---채널별 목록보기
-SELECT 
+-- 채널별 목록보기
+SELECT * FROM VIDEO WHERE CHANNEL_CODE=3;
 
---비디오 1개 보기
-SELECT 
+-- 비디오 1개 보기
+SELECT * FROM VIDEO WHERE VIDEO_CODE=1;
 
+-- 카테고리 보기
+SELECT * FROM CATEGORY;
 
 
 
